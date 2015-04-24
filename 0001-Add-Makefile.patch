@@ -1,0 +1,32 @@
+From aae72ae503d37ed0bf60498c897685455168c20c Mon Sep 17 00:00:00 2001
+From: Ikey Doherty <michael.i.doherty@intel.com>
+Date: Fri, 24 Apr 2015 17:11:45 +0100
+Subject: [PATCH] Add Makefile
+
+Signed-off-by: Ikey Doherty <michael.i.doherty@intel.com>
+---
+ Makefile | 12 ++++++++++++
+ 1 file changed, 12 insertions(+)
+ create mode 100644 Makefile
+
+diff --git a/Makefile b/Makefile
+new file mode 100644
+index 0000000..6465a6e
+--- /dev/null
++++ b/Makefile
+@@ -0,0 +1,12 @@
++datadir ?= /usr/share
++
++dummy:
++
++install-data:
++	mkdir -p $(DESTDIR)$(datadir)/icons/
++	cp -Rv Moka/ $(DESTDIR)$(datadir)/icons/.
++	chmod a+r -R $(DESTDIR)$(datadir)
++
++install: install-data
++
++.PHONY: dummy
+-- 
+1.9.1
+
