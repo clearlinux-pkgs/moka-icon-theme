@@ -1,5 +1,5 @@
 PKG_NAME := moka-icon-theme
-URL := https://github.com/moka-project/moka-icon-theme/archive/v5.3.5.tar.gz
-ARCHIVES :=
+URL := https://github.com/snwh/moka-icon-theme/archive/v5.3.6.tar.gz
+
 
 include ../common/Makefile.common
