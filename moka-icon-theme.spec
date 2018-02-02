@@ -4,7 +4,7 @@
 #
 Name     : moka-icon-theme
 Version  : 5.3.6
-Release  : 13
+Release  : 14
 URL      : https://github.com/snwh/moka-icon-theme/archive/v5.3.6.tar.gz
 Source0  : https://github.com/snwh/moka-icon-theme/archive/v5.3.6.tar.gz
 Summary  : Moka Icon theme
