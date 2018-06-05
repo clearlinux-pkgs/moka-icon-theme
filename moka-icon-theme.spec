@@ -4,7 +4,7 @@
 #
 Name     : moka-icon-theme
 Version  : 5.3.6
-Release  : 16
+Release  : 17
 URL      : https://github.com/snwh/moka-icon-theme/archive/v5.3.6.tar.gz
 Source0  : https://github.com/snwh/moka-icon-theme/archive/v5.3.6.tar.gz
 Summary  : Moka Icon theme
@@ -35,9 +35,9 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C
-export SOURCE_DATE_EPOCH=1498624827
+export SOURCE_DATE_EPOCH=1528214237
 %autogen --disable-static
-make V=1  %{?_smp_mflags}
+make  %{?_smp_mflags}
 
 %check
 export LANG=C
@@ -47,7 +47,7 @@ export no_proxy=localhost,127.0.0.1,0.0.0.0
 make VERBOSE=1 V=1 %{?_smp_mflags} check
 
 %install
-export SOURCE_DATE_EPOCH=1498624827
+export SOURCE_DATE_EPOCH=1528214237
 rm -rf %{buildroot}
 %make_install
 ## make_install_append content
@@ -59,6 +59,7 @@ gtk-update-icon-cache %{buildroot}%{_datadir}/icons/Moka
 
 %files data
 %defattr(-,root,root,-)
+%exclude /usr/share/icons/Moka/icon-theme.cache
 /usr/share/icons/Moka/16x16/actions/exit.png
 /usr/share/icons/Moka/16x16/actions/gnome-lockscreen.png
 /usr/share/icons/Moka/16x16/actions/gnome-logout.png
@@ -33382,5 +33383,4 @@ gtk-update-icon-cache %{buildroot}%{_datadir}/icons/Moka
 /usr/share/icons/Moka/96x96@2x/web/wikipedia.png
 /usr/share/icons/Moka/96x96@2x/web/wordpress.png
 /usr/share/icons/Moka/96x96@2x/web/yahoo.png
-/usr/share/icons/Moka/icon-theme.cache
 /usr/share/icons/Moka/index.theme

@@ -1,0 +1,29 @@
+From 1177c7cbddc86791d794f7fee6130fb09ccb78c3 Mon Sep 17 00:00:00 2001
+From: Jose Lamego <jose.a.lamego@intel.com>
+Date: Thu, 31 May 2018 12:07:21 -0500
+Subject: [PATCH moka-icon-theme] exclude icon-theme.cache
+
+swupd logs continuosly list icon-theme.cache files as missing,
+giving the wrong impression that they're not appropriately created,
+due to a post-update task that re-creates them in a different location.
+
+This commit cleans the swupd logs by ommiting providing the
+cache files, which are now created and updated by a swupd trigger
+service.
+
+Signed-off-by: Jose Lamego <jose.a.lamego@intel.com>
+---
+ excludes | 1 +
+ 1 file changed, 1 insertion(+)
+
+diff --git a/excludes b/excludes
+index f075ede..f2d581d 100644
+--- a/excludes
++++ b/excludes
+@@ -1,2 +1,3 @@
+ # This file contains the output files that need %exclude. Full path
+ # names, one per line.
++/usr/share/icons/Moka/icon-theme.cache
+-- 
+2.17.1
+
